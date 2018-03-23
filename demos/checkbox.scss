@@ -21,6 +21,10 @@
 @import "../packages/mdc-ripple/mixins";
 @import "../packages/mdc-theme/color-palette";
 
+.mdc-checkbox {
+  margin: 12px;
+}
+
 .demo-checkbox--custom-all {
   $color: $material-color-red-500;
 
