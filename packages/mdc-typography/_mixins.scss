@@ -31,6 +31,12 @@
 
   @include mdc-typography-base;
 
+  $style-props: map-remove($style-props, margin);
+
+  @if global_variable_exists(mdc-typography-styles-#{$style}) {
+    $style-props: map-merge($style-props, $mdc-typography-styles-button);
+  }
+
   @each $key, $value in $style-props {
     #{$key}: $value;
   }
