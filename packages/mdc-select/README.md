@@ -62,7 +62,7 @@ npm install @material/select
       Fats, Oils, and Sweets
     </option>
   </select>
-  <div class="mdc-select__label">Pick a Food Group</div>
+  <div class="mdc-floating-label">Pick a Food Group</div>
   <div class="mdc-select__bottom-line"></div>
 </div>
 ```
@@ -88,7 +88,7 @@ See [Importing the JS component](../../docs/importing-js.md) for more informatio
 #### Select with pre-selected option
 
 When dealing with the select component that has pre-selected values, you'll want to ensure that you
-render `mdc-select__label` with the `mdc-select__label--float-above` modifier class and the selected
+render `mdc-floating-label` with the `mdc-floating-label--float-above` modifier class and the selected
 option with the `selected` attribute. This will ensure that the label moves out
 of the way of the select's value and prevents a Flash Of Un-styled Content (**FOUC**).
 
@@ -108,7 +108,7 @@ of the way of the select's value and prevents a Flash Of Un-styled Content (**FO
       Milk, Yogurt, and Cheese
     </option>
   </select>
-  <div class="mdc-select__label mdc-select__label--float-above">Pick a Food Group</div>
+  <div class="mdc-floating-label mdc-floating-label--float-above">Pick a Food Group</div>
   <div class="mdc-select__bottom-line"></div>
 </div>
 ```
@@ -133,7 +133,7 @@ need to manually add the `disabled` attribute to the `<select />` element.
       Fruit
     </option>
   </select>
-  <div class="mdc-select__label">Pick a Food Group</div>
+  <div class="mdc-floating-label">Pick a Food Group</div>
   <div class="mdc-select__bottom-line"></div>
 </div>
 ```
@@ -156,7 +156,7 @@ To disable a list item, set the `disabled` attribute.
       Fruit
     </option>
   </select>
-  <div class="mdc-select__label">Pick a Food Group</div>
+  <div class="mdc-floating-label">Pick a Food Group</div>
   <div class="mdc-select__bottom-line"></div>
 </div>
 ```
@@ -184,7 +184,7 @@ Mixin | Description
 
 To customize the color of the list items, refer to the [List documentation](../mdc-list/README.md).
 
-> NOTE: To customize label color please see [label readme](./label/README.md).
+> NOTE: To customize label color please see [label readme](../mdc-floating-label/README.md).
 
 ### MDC Select Component API
 

@@ -15,9 +15,9 @@
  */
 
 import {MDCComponent} from '@material/base/index';
+import {MDCFloatingLabel} from '@material/floating-label/index';
 import {MDCRipple} from '@material/ripple/index';
 import {MDCSelectBottomLine} from './bottom-line/index';
-import {MDCSelectLabel} from './label/index';
 
 import MDCSelectFoundation from './foundation';
 import {strings} from './constants';
@@ -76,7 +76,7 @@ export class MDCSelect extends MDCComponent {
   }
 
   initialize(
-    labelFactory = (el) => new MDCSelectLabel(el),
+    labelFactory = (el) => new MDCFloatingLabel(el),
     bottomLineFactory = (el) => new MDCSelectBottomLine(el)) {
     this.surface_ = this.root_.querySelector(strings.SURFACE_SELECTOR);
     const labelElement = this.root_.querySelector(strings.LABEL_SELECTOR);

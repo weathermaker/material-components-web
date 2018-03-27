@@ -49,7 +49,7 @@ function getFixture() {
           Apple
         </option>
       </select>
-      <div class="mdc-select__label">Pick a Food Group</div>
+      <div class="mdc-floating-label">Pick a Food Group</div>
       <div class="mdc-select__bottom-line"></div>
     </div>
   `;
@@ -66,7 +66,7 @@ function setupTest() {
   const label = new FakeLabel();
   const fixture = getFixture();
   const surface = fixture.querySelector('.mdc-select__surface');
-  const labelEl = fixture.querySelector('.mdc-select__label');
+  const labelEl = fixture.querySelector('.mdc-floating-label');
   const bottomLineEl = fixture.querySelector('.mdc-select__bottom-line');
   const component = new MDCSelect(fixture, /* foundation */ undefined, () => label, () => bottomLine);
 
