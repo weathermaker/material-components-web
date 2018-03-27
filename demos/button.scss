@@ -59,3 +59,12 @@ $mdc-typography-styles-button: (
 .demo-icon-color {
   @include mdc-button-icon-color(orange);
 }
+
+.demo-change-primary-color {
+  $my-color: (
+    primary: darkorange,
+    text-primary-on-primary: black,
+  );
+
+  @include mdc-button-primary-color($my-color);
+}

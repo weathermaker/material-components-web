@@ -62,6 +62,23 @@
   }
 }
 
+@mixin mdc-button-primary-color($color) {
+  @include mdc-button-ink-color(map-get($color, primary));
+  @include mdc-states(map-get($color, primary));
+  @include mdc-button-container-fill-color(transparent);
+
+  &.mdc-button--raised,
+  &.mdc-button--unelevated {
+    @include mdc-button-container-fill-color(map-get($color, primary));
+    @include mdc-button-ink-color(map-get($color, text-primary-on-primary));
+    @include mdc-states(map-get($color, text-primary-on-primary));
+  }
+
+  &.mdc-button--stroked {
+    @include mdc-button-stroke-color(map-get($color, primary));
+  }
+}
+
 @mixin mdc-button-corner-radius($corner-radius) {
   border-radius: $corner-radius;
 }
