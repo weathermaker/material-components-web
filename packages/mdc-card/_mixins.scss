@@ -21,12 +21,11 @@
 //
 
 @mixin mdc-card-fill-color($color) {
-  @include mdc-theme-prop(surface, $color);
+  @include mdc-theme-prop(background-color, $color);
 }
 
 @mixin mdc-card-stroke($color, $thickness: 1px) {
-  //TODO(michelle): Deciding this color now;
-  //border: $thickness solid mdc-theme-prop-value($color);
+  border: $thickness solid mdc-theme-prop-value($color);
 }
 
 @mixin mdc-card-corner-radius($radius) {
