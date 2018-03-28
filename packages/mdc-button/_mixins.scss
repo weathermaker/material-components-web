@@ -160,14 +160,6 @@
 
 @mixin mdc-button--filled_() {
   @include mdc-button-horizontal-padding($mdc-button-contained-horizontal-padding);
-
-  &:disabled {
-    @include mdc-theme-prop(background-color, rgba(black, .12));
-    @include mdc-theme-prop(color, text-disabled-on-light);
-  }
-}
-
-@mixin mdc-button--raised_() {
   @include mdc-elevation(2);
 
   transition: mdc-elevation-transition-value();
@@ -183,6 +175,8 @@
 
   &:disabled {
     @include mdc-elevation(0);
+    @include mdc-theme-prop(background-color, rgba(black, .12));
+    @include mdc-theme-prop(color, text-disabled-on-light);
   }
 }
 

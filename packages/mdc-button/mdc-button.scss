@@ -41,8 +41,7 @@
   }
 }
 
-.mdc-button--raised,
-.mdc-button--unelevated,
+.mdc-button--filled,
 .mdc-button--stroked {
   .mdc-button__icon {
     // Icons inside contained buttons have different styles due to increased button padding
@@ -50,16 +49,11 @@
   }
 }
 
-.mdc-button--raised,
-.mdc-button--unelevated {
+.mdc-button--filled {
   @include mdc-button--filled_;
   @include mdc-button-container-fill-color(primary);
   @include mdc-button-ink-color(text-primary-on-primary);
   @include mdc-states(text-primary-on-primary);
-}
-
-.mdc-button--raised {
-  @include mdc-button--raised_;
 }
 
 .mdc-button--stroked {

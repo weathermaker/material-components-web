@@ -88,9 +88,8 @@ CSS Class | Description
 --- | ---
 `mdc-button` | Mandatory, defaults to a text button that is flush with the surface
 `mdc-button__icon`    | Optional, for the icon element
-`mdc-button--raised` | Optional, a contained button that is elevated upon the surface
-`mdc-button--unelevated` | Optional, a contained button that is flush with the surface
-`mdc-button--stroked` | Optional, a contained button that is flush with the surface and has a visible border
+`mdc-button--filled` | Optional, a filled contained button that is elevated upon the surface
+`mdc-button--stroked` | Optional, a contained button that is flush with a visible border
 `mdc-button--dense` | Optional, compresses the button text to make it slightly smaller
 
 ### Disabled Button
@@ -100,8 +99,8 @@ the button to `disabled` to disable a button. Disabled buttons cannot be interac
 with and have no visual interaction effect.
 
 ```html
-<button class="mdc-button mdc-button--raised" disabled>
-  Raised disabled button
+<button class="mdc-button mdc-button--filled" disabled>
+  Filled disabled button
 </button>
 ```
 
@@ -130,7 +129,7 @@ By default an MDC Button will inherit its color from the theme and align with [M
 
 #### `mdc-button-filled-accessible($container-fill-color)`
 
-This mixin is provided for customizing a *raised* or *unelevated* button's color. It changes the Button's
+This mixin is provided for customizing a filled button's color. It changes the Button's
 container color to the given color, and updates the Button's ink and ripple color to meet accessibility standards.
 
 ### Advanced Sass Mixins
@@ -154,4 +153,4 @@ The ripple effect for the Button component is styled using [MDC Ripple](../mdc-r
 In browsers that fully support CSS variables, the above mixins will hook up styles using CSS variables if a theme property is passed.
 However, due to Edge's buggy CSS variable support, `mdc-button-container-fill-color` will not honor CSS variables in Edge.
 This means you will need to override button container styles manually for Edge if you are altering the affected CSS variables for theme properties
-(raised and unelevated buttons use primary by default for the container fill color).
+(filled buttons use primary by default for the container fill color).
