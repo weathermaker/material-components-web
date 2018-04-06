@@ -49,6 +49,13 @@
   @include mdc-shape-angled-corner-stroke(2px, $mdc-theme-primary);
 }
 
+.right-arrow-container--stroked {
+  // Re-apply angled-corner mixin to factor stroke into the mixin's padding adjustment.
+  // Invoking this mixin with stroke-width would ordinarily be done for all stroked buttons,
+  // but the other two buttons don't have large enough cuts for the mixin to apply padding overrides.
+  @include mdc-button-angled-corner($mdc-theme-background, 0, $mdc-button-height / 2, $mdc-button-height / 2, 0, 2px);
+}
+
 .hero {
   // Override background mask color for buttons in hero section
   @include mdc-shape-angled-corner-background($hero-background-color);

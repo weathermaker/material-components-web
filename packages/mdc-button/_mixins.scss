@@ -67,13 +67,14 @@
   border-radius: $corner-radius;
 }
 
-@mixin mdc-button-angled-corner($background-color, $top-left-size, $top-right-size: $top-left-size, $bottom-right-size: $top-left-size, $bottom-left-size: $top-right-size) {
+@mixin mdc-button-angled-corner($background-color, $top-left-size, $top-right-size: $top-left-size, $bottom-right-size: $top-left-size, $bottom-left-size: $top-right-size, $stroke-width: 0) {
   $threshold: $mdc-button-contained-horizontal-padding * 3 / 4;
   $sides: (left, $top-left-size, $bottom-left-size),
     (right, $top-right-size, $bottom-right-size);
 
   @each $side, $top-size, $bottom-size in $sides {
-    $max-size: max($top-size, $bottom-size);
+    $max-size: max($top-size, $bottom-size) - $stroke-width;
+
     @if $max-size > $threshold {
       .mdc-button {
         padding-#{$side}: $mdc-button-contained-horizontal-padding + $max-size - $threshold;
