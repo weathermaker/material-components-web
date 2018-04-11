@@ -24,7 +24,7 @@
 
 // Special case, so that .mdc-theme--background changes background color, not text color.
 .mdc-theme--background {
-  @include mdc-theme-prop(background-color, background);
+  @include mdc-theme-prop(background-color, surface);
 }
 
 @each $style in map-keys($mdc-theme-property-values) {
